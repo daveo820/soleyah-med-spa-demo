@@ -14,7 +14,7 @@ CFG.update(base=BASE,name='Soleyah Med Spa & Wellness',theme='#3e1f14',org=ORG,
  icon="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%233e1f14'/%3E%3Cpath d='M7 22a9 9 0 0 1 18 0' stroke='%23efe4d4' stroke-width='2.4' fill='none'/%3E%3C/svg%3E",
  bar='Not the official Soleyah site. Facts come from soleyahmedspa.com, Sunset Valley Village and What Now Austin. Placeholders are labeled.',
  nav=[('treatments.html','Treatments'),('laura.html','Laura&rsquo;s story'),('visit.html','Visit')],
- mark='<a class="mark" href="index.html" aria-label="Soleyah home"><img src="img/soleyah-logo-640.png" alt="Soleyah" width="640" height="111" class="logo"><small class="logo-sub">Med Spa &amp; Wellness</small></a>',
+ mark='<a class="mark" href="index.html"><img src="img/soleyah-logo-640.png" alt="Soleyah" width="640" height="111" class="logo"><small class="logo-sub">Med Spa &amp; Wellness</small></a>',
  cta='<a class="btn" href="visit.html#list">Join the opening list</a>',
  foot=f'''<footer class="foot"><div class="wrap">
 <div class="foot-sun" aria-hidden="true"></div>

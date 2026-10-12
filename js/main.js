@@ -11,5 +11,6 @@ const els=$$('.rv');
 if(!('IntersectionObserver' in window)||reduce){els.forEach(e=>e.classList.add('in'));return}
 const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){const t=en.target,s=[...t.parentNode.children].filter(x=>x.classList.contains('rv'));t.style.transitionDelay=Math.min(Math.max(s.indexOf(t),0),5)*70+'ms';t.classList.add('in');t.querySelectorAll('[data-count]').forEach(count);io.unobserve(t)}}),{rootMargin:'0px 0px -80px 0px'});
 els.forEach(e=>io.observe(e));
-// safety: anything above the fold reveals immediately
+// safety: anything above the fold reveals immediately, and a scroll sweep catches fast scrolls the observer misses
+let tk=0;const sweep=()=>{tk=0;els.forEach(e=>{if(!e.classList.contains('in')&&e.getBoundingClientRect().top<innerHeight)e.classList.add('in')})};addEventListener('scroll',()=>{if(!tk)tk=setTimeout(sweep,150)},{passive:true});
 requestAnimationFrame(()=>els.forEach(e=>{if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in')}));})();
