@@ -58,7 +58,7 @@ page('index.html','Soleyah Med Spa and Wellness | Opening in Sunset Valley, TX',
 </div></section>
 
 <section class="founder"><div class="wrap fd-grid">
- <div class="fd-card rv"><div class="ph-portrait" role="img" aria-label="Placeholder for a portrait of Laura Lara"><span>Portrait of Laura Lara<br>from Lala Blush</span></div></div>
+ <div class="fd-card rv"><div class="ph-portrait" role="img" aria-label="Placeholder for a portrait of Laura Lara"><span>Portrait of Laura Lara <br>from Lala Blush</span></div></div>
  <div class="rv"><p class="kicker">{SUN} The founder</p><h2>From a $39,000 classroom to her fifth location.</h2>
  <p>Laura spent seven years teaching high school business. Her students kept asking why she taught them to build businesses but had never built one. During the pandemic she listened, found paramedical tattooing, and started Lala Blush.</p>
  <p>Soleyah is her biggest location yet, and it was designed from day one to grow into a brand people will call an Austin original.</p>
@@ -82,7 +82,7 @@ page('laura.html','Meet Laura Lara, Founder of Soleyah Med Spa | Sunset Valley',
  'Former high school teacher, Lala Blush founder and now the woman behind Soleyah in Sunset Valley. Read how Laura Lara went from teaching to her fifth location.', f'''
 <section class="page-head story"><div class="wrap st-grid"><div><p class="kicker rv">{SUN} Laura&rsquo;s story</p><h1 class="rv">“The world is yours.”</h1>
 <p class="lede rv">Laura Lara grew up in El Paso, the daughter of immigrant parents from Mexico who sacrificed everything for their children&rsquo;s future.</p></div>
-<div class="ph-portrait rv" role="img" aria-label="Placeholder for a portrait of Laura Lara"><span>Portrait of Laura<br>from Lala Blush</span></div></div></section>
+<div class="ph-portrait rv" role="img" aria-label="Placeholder for a portrait of Laura Lara"><span>Portrait of Laura <br>from Lala Blush</span></div></div></section>
 <section class="timeline"><div class="wrap"><ol class="tl">
 <li class="rv"><b>The classroom</b><p>Seven years teaching high school business, and on the path to principal. “Five years ago, I was a high school teacher making $39,000 a year.”</p></li>
 <li class="rv"><b>The question</b><p>Her students kept asking: you make us do projects about building businesses, but you&rsquo;ve never built one. During the pandemic, she listened.</p></li>
