@@ -1,0 +1,50 @@
+/* Shared mechanics. Colors and type come from design-system.css tokens. */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--page);color:var(--ink);font:400 var(--fs-body,18px)/1.62 var(--body);text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--link)}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.08;margin:0 0 .5em;text-wrap:balance;color:var(--head,inherit)}
+p{margin:0 0 1em;max-width:68ch}
+.wrap{width:min(100% - 2.5rem,var(--max,1240px));margin-inline:auto}
+@media (max-width:420px){.wrap{width:calc(100% - 2rem)}}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1rem;z-index:99}.skip:focus{left:1rem}
+.demo-bar{background:var(--bar-bg,#111);color:var(--bar-fg,#eee);font:500 13px/1.45 var(--body);padding:.55rem 1.25rem;text-align:center}
+.demo-bar a{color:inherit;font-weight:700}
+.kicker{font:600 12px/1.4 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--kick,var(--accent));margin:0 0 1rem;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.top{position:sticky;top:0;z-index:40;background:var(--nav-bg);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:1.25rem;min-height:72px}
+.nav .mark{margin-right:auto;display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--nav-fg);min-height:44px}
+#menu{list-style:none;display:flex;gap:.25rem;margin:0;padding:0}
+#menu a{display:flex;align-items:center;min-height:44px;padding:0 .8rem;text-decoration:none;color:var(--nav-fg);font:500 15px var(--body);border-radius:4px}
+#menu a:hover,#menu a[aria-current]{color:var(--accent-ink,var(--accent))}
+#menu a[aria-current]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.menu-btn{display:none;min-height:44px;min-width:64px;padding:0 1rem;border:1.5px solid currentColor;background:transparent;color:var(--nav-fg);font:600 15px var(--body);border-radius:999px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.75rem 1.4rem;border-radius:var(--radius,4px);background:var(--btn-bg);color:var(--btn-fg);text-decoration:none;font:600 16px/1.2 var(--body);border:1.5px solid var(--btn-bg);cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn--plain{background:transparent;color:var(--btn-plain,var(--ink));border-color:currentColor}
+.top .btn{min-height:44px;padding:.55rem 1.1rem;font-size:15px}
+@media (max-width:900px){
+ .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+ #menu{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--menu-bg,var(--page));padding:.5rem 1.25rem 1.25rem;border-bottom:1px solid var(--line);box-shadow:0 18px 30px -20px rgba(0,0,0,.4)}
+ #menu.open{display:flex}
+ #menu a{font-size:18px;color:var(--menu-fg,var(--ink));border-bottom:1px solid var(--line)}
+ .nav{position:relative}
+}
+@media (max-width:520px){.top .btn{display:none}.nav{gap:.6rem}}
+.rv{opacity:1}
+.js-ready .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.js-ready .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js-ready .rv{opacity:1;transform:none}}
+.ph{border:1.5px dashed var(--ph,#b08a3e);background:var(--ph-bg,rgba(176,138,62,.08));padding:1rem 1.2rem;border-radius:6px;font-size:16px}
+.ph b{font-family:var(--body);letter-spacing:.06em;text-transform:uppercase;font-size:12px;display:block;margin-bottom:.25rem}
+.note{font-size:15px;color:var(--muted)}
+form .fld{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+form label{font:600 14px var(--body);letter-spacing:.02em}
+form input,form select,form textarea{font:400 16px/1.4 var(--body);padding:.8rem .9rem;border:1.5px solid var(--line-strong,#999);border-radius:var(--radius,4px);background:var(--field,#fff);color:var(--ink);min-height:48px;width:100%}
+form textarea{min-height:120px}
+.formmsg{min-height:1.5em;font-weight:600}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.nowrap{white-space:nowrap}
